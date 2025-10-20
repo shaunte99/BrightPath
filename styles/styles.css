@@ -1,0 +1,339 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo:active {
+  transform: scale(1.15);
+}
+
+.logo .bright { color: #7ec8e3; font-weight: bold; }
+.logo .path { color: #ffa14b; font-weight: bold; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #7ec8e3;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* CTA BUTTON */
+.cta-btn, .btn-primary {
+  background: #7ec8e3;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover, .btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn-secondary {
+  border: 2px solid #ffa14b;
+  color: #ffa14b;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #fff3e6;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text, .hero-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.hero-text.visible, .hero-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* ================= GRADES ================= */
+.grades {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.grades h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.grades p {
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #666;
+}
+
+.grades-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.grade-card {
+  width: 300px;
+  height: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.grade-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.grade-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.grade-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.grade-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* ================= WHY BRIGHTPATH ================= */
+.why {
+  background: #f9fefb;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.why-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: #7ec8e3;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #007ea7;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-grid h3 {
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ================= LOGO IMAGE ================= */
+.logo-img {
+  height: 50px; /* fits nicely in header/footer */
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grades-grid, .why-grid, .footer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
