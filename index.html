@@ -97,6 +97,20 @@
     </div>
   </section>
 
+  <!-- PARTNERSHIPS & LOCATIONS -->
+  <section class="partnerships">
+    <div class="container">
+      <h2>Our Partnerships</h2>
+      <p>We provide extra lessons on school grounds so learners are in an environment they are familiar with, and parents save on traveling costs.</p>
+      <p>Currently, BrightPath works with Constanta Kloof Primary, focusing mainly on tutoring and transport. We aim to grow into a more integrated, digital, and smoother experience for parents and students.</p>
+      <h3>Partnered Schools</h3>
+      <ul>
+        <li>Constanta Kloof Primary</li>
+      </ul>
+      <div id="map" class="map-container"></div>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS PLACEHOLDER -->
   <section class="testimonials">
     <div class="container">
@@ -132,12 +146,36 @@
       </div>
       <div class="footer-contact">
         <h3>Contact Us</h3>
-        <p>Email: info@brightpath.com</p>
-        <p>Phone: +27 123 456 789</p>
+        <p>Email: brightpathaftercare@gmail.com</p>
+        <p>Phone: 084 532 5730</p>
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/brightpathaftercare?igsh=c2xjYW44cWVueXZn" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" class="social-icon">
+        </a>
       </div>
     </div>
   </footer>
 
   <script src="scripts/scripts.js"></script>
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    function initMap() {
+      const schoolLocation = { lat: -26.0295, lng: 28.0123 }; // Replace with actual coordinates
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: schoolLocation,
+        mapTypeControl: false,
+        streetViewControl: false
+      });
+      const marker = new google.maps.Marker({
+        position: schoolLocation,
+        map: map,
+        title: "Constanta Kloof Primary",
+      });
+    }
+    window.addEventListener('load', initMap);
+  </script>
 </body>
 </html>

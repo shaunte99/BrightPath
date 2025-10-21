@@ -63,3 +63,27 @@ menuIcon?.addEventListener('click', () => {
     navLinks.style.transform = 'translateY(-20px)';
   }
 });
+
+// ================= GOOGLE MAP =================
+function initMap() {
+  // Coordinates for Constanta Kloof Primary School
+  const schoolLocation = { lat: -26.0148, lng: 28.0876 };
+  
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: schoolLocation,
+    zoom: 15,
+  });
+
+  const marker = new google.maps.Marker({
+    position: schoolLocation,
+    map: map,
+    title: "Constanta Kloof Primary School"
+  });
+}
+
+// Automatically initialize map when page loads
+window.addEventListener('load', () => {
+  if(document.getElementById('map')) {
+    initMap();
+  }
+});
