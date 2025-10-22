@@ -36,7 +36,7 @@
         <p>Personalized in-person and online tutoring for Grades 1–12</p>
         <div class="hero-buttons">
           <a href="#" class="btn-primary">Book a Tutor</a>
-          <a href="#" class="btn-secondary">Learn More</a>
+          <a href="learn.html" class="btn-secondary">Learn More</a>
         </div>
       </div>
       <div class="hero-image">
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="subjects-placeholder">
-        <!-- This will show subjects dynamically -->
+        <!-- Subjects will display dynamically -->
       </div>
     </div>
   </section>
@@ -107,15 +107,23 @@
       <ul>
         <li>Constanta Kloof Primary</li>
       </ul>
-      <div id="map" class="map-container"></div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.0411547045267!2d27.9029321!3d-26.1453311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a1dae110edc3%3A0xf8d9450dc3120c68!2sConstantia%20Kloof%20Primary%20School!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS PLACEHOLDER -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="container">
       <h2>Testimonials</h2>
-      <p>Coming soon!</p>
+      <div class="testimonial-card">
+        <p>"Tutoring service has been a big help for my son. He really enjoys the sessions, I see it in how he speaks about what he has learnt. He's always very upbeat and happy afterwards. He's always positive about it, which puts me at so much ease. He has really improved!"</p>
+        <span>- Winnie</span>
+      </div>
     </div>
   </section>
 
@@ -134,6 +142,7 @@
         <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img">
         <span class="bright">Bright</span><span class="path">Path</span>
         <p>Guiding learners to success</p>
+        <p class="designed-by">Designed by WebCrate</p>
       </div>
       <div class="footer-links">
         <h3>Quick Links</h3>
@@ -152,30 +161,14 @@
         <a href="https://www.instagram.com/brightpathaftercare?igsh=c2xjYW44cWVueXZn" target="_blank">
           <img src="images/instagram.png" alt="Instagram" class="social-icon">
         </a>
+        <!-- WhatsApp Icon -->
+        <a href="https://wa.me/27845325730" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp" class="social-icon">
+        </a>
       </div>
     </div>
   </footer>
 
   <script src="scripts/scripts.js"></script>
-
-  <!-- Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-  <script>
-    function initMap() {
-      const schoolLocation = { lat: -26.0295, lng: 28.0123 }; // Replace with actual coordinates
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: schoolLocation,
-        mapTypeControl: false,
-        streetViewControl: false
-      });
-      const marker = new google.maps.Marker({
-        position: schoolLocation,
-        map: map,
-        title: "Constanta Kloof Primary",
-      });
-    }
-    window.addEventListener('load', initMap);
-  </script>
 </body>
 </html>
