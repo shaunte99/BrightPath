@@ -22,8 +22,6 @@ const subjectsPlaceholder = document.querySelector('.subjects-placeholder');
 gradeCards.forEach(card => {
   card.addEventListener('click', () => {
     const phase = card.dataset.phase;
-
-    // subtle animation
     subjectsPlaceholder.innerHTML = `<p class="fade-text">You clicked <strong>${phase} phase</strong>. Subjects will show here soon!</p>`;
     const text = subjectsPlaceholder.querySelector('.fade-text');
     text.style.opacity = 0;
@@ -49,7 +47,7 @@ const navLinks = document.querySelector('.nav-links');
 menuIcon?.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 
-  if(navLinks.classList.contains('active')){
+  if (navLinks.classList.contains('active')) {
     navLinks.style.opacity = 0;
     navLinks.style.transform = 'translateY(-20px)';
     setTimeout(() => {
@@ -66,24 +64,55 @@ menuIcon?.addEventListener('click', () => {
 
 // ================= GOOGLE MAP =================
 function initMap() {
-  // Coordinates for Constanta Kloof Primary School
   const schoolLocation = { lat: -26.0148, lng: 28.0876 };
-  
   const map = new google.maps.Map(document.getElementById("map"), {
     center: schoolLocation,
     zoom: 15,
   });
 
-  const marker = new google.maps.Marker({
+  new google.maps.Marker({
     position: schoolLocation,
     map: map,
     title: "Constanta Kloof Primary School"
   });
 }
 
-// Automatically initialize map when page loads
 window.addEventListener('load', () => {
-  if(document.getElementById('map')) {
-    initMap();
-  }
+  if (document.getElementById('map')) initMap();
 });
+
+// ================= TESTIMONIAL SLIDER =================
+const testimonials = document.querySelectorAll('.testimonial-card');
+const nextBtn = document.getElementById('nextTestimonial');
+const prevBtn = document.getElementById('prevTestimonial');
+let current = 0;
+
+function showTestimonial(index) {
+  testimonials.forEach((t, i) => {
+    t.classList.remove('active', 'exit-left');
+    if (i === index) {
+      t.classList.add('active');
+    } else if (i < index) {
+      t.classList.add('exit-left');
+    }
+  });
+}
+
+nextBtn?.addEventListener('click', () => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+});
+
+prevBtn?.addEventListener('click', () => {
+  current = (current - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(current);
+});
+
+// Auto-rotate testimonials every 6 seconds
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 6000);
+
+// Initialize first testimonial
+showTestimonial(current);

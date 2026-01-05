@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <!-- HEADER -->
+  
   <header>
     <div class="container header-container">
       <div class="logo">
@@ -17,9 +17,9 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Tutors</a></li>
+          <li><a href="learn.html">Learn more</a></li>
+          <li><a href="transport.html">Transport Service</a></li>
+          <li><a href="episodes.html">Brighty's Adventures</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -116,38 +116,46 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonial-card">
+ <!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2>
+
+    <div class="testimonial-container">
+      <div class="testimonial active">
         <p>"Tutoring service has been a big help for my son. He really enjoys the sessions, I see it in how he speaks about what he has learnt. He's always very upbeat and happy afterwards. He's always positive about it, which puts me at so much ease. He has really improved!"</p>
         <span>- Winnie</span>
       </div>
 
-    <div class="testimonial-card">
-      <p>"BrightPath Aftercare helped my daughter to pass the 3rd term as she failed 2nd term and needed a tutor. I am very happy with the attention and patience they have when tutoring her. So much so that I have enrolled my other 2 daughters for tutoring. I really appreciate the work they have done and feel sure that my kids are benefiting from the help."</p>
-      <span>- Charmy</span>
-    </div>
-
-    <div class="testimonial-card">
-        <p>"BrightPath has honestly been such a blessing for us. My daughter’s confidence in Afrikaans has grown so much."</p>
-        <span>- Thandiwe</span>
+      <div class="testimonial">
+        <p>"BrightPath Aftercare helped my daughter to pass the 3rd term as she failed 2nd term and needed a tutor. I am very happy with the attention and patience they have when tutoring her. So much so that I have enrolled my other 2 daughters for tutoring. I really appreciate the work they have done and feel sure that my kids are benefiting from the help."</p>
+        <span>- Charmy</span>
       </div>
 
-     <div class="testimonial-card">
-        <p>"I used to find maths stressful but my BrightPath tutor explains everything in a way that actually makes sense. I’ve improved a lot and feel way more confident now, especially when writing tests."</p>
-        <span>- Cassidy</span>
-      </div>
-
-      <div class="testimonial-card">
+      <div class="testimonial">
         <p>"BrightPath has honestly been such a blessing for us. My daughter’s confidence in maths has grown so much and she actually enjoys her lessons now. The tutors are patient, consistent and genuinely care about the learners' progress."</p>
         <span>- Sarah</span>
       </div>
 
+      <div class="testimonial">
+        <p>"I used to find maths stressful but my BrightPath tutor explains everything in a way that actually makes sense. I’ve improved a lot and feel way more confident now, especially when writing tests."</p>
+        <span>- Cassidy</span>
+      </div>
 
+      <div class="testimonial">
+        <p>"BrightPath’s tutors are amazing. They take the time to understand each child and teach in a way that makes learning enjoyable. My son looks forward to every session!"</p>
+        <span>- Thandiwe</span>
+      </div>
     </div>
-  </section>
+
+    <div class="testimonial-controls">
+      <button class="testimonial-btn" id="prev-testimonial">← Previous</button>
+      <button class="testimonial-btn" id="next-testimonial">Next →</button>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- CTA SECTION -->
   <section class="cta">
@@ -194,4 +202,3 @@
   <script src="scripts/scripts.js"></script>
 </body>
 </html>
-

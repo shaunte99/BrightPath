@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ================= SMOOTH SCROLL =================
+  // ================= SMOOTH SCROLL 
   const smoothLinks = document.querySelectorAll('a[href^="#"]');
   smoothLinks.forEach(link => {
     link.addEventListener('click', e => {
